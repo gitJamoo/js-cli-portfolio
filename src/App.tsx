@@ -268,7 +268,11 @@ const App: React.FC = () => {
       <footer className="footer">
         <p>
           © 2024 James Smith. All rights reserved.{" "}
-          <a href="" target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://github.com/gitJamoo/js-cli-portfolio"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Source Code
           </a>
           .
