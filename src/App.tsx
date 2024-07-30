@@ -169,11 +169,7 @@ const App: React.FC = () => {
         <p>
           <a href="mailto:james.smith@example.com">Email</a> | Resume (
           <a href="https://chatgpt.com/">download</a> -{" "}
-          <a
-            href="https://chatgpt.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://chatgpt.com/" rel="noopener noreferrer">
             view
           </a>
           ) |{" "}
