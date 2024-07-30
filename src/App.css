@@ -1,0 +1,93 @@
+.App {
+  text-align: center;
+  background-color: black;
+  color: white;
+  font-family: monospace;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align items at the top */
+}
+
+.main-content {
+  width: 80%;
+  max-width: 800px;
+  margin-top: 5%; /* Adjust the top margin to position the content */
+  margin-bottom: auto; /* Push the content up and allow space at the bottom */
+  padding: 20px;
+  background-color: #383535;
+  border: 1px solid #00ff00;
+  color: #00ff00;
+  flex: 1;
+}
+
+a {
+  color: gray;
+}
+
+a:hover {
+  color: rgb(70, 69, 69);
+}
+
+.App-header {
+  margin-bottom: 20px;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.cli-container {
+  font-family: monospace;
+  width: 100%;
+  max-width: 800px;
+  border: 1px solid #00ff00;
+  padding: 20px;
+  background-color: #383535;
+  position: relative;
+  color: #00ff00;
+  display: flex;
+  flex-direction: column; /* Ensure the content stacks vertically */
+}
+
+.cli-output {
+  font-family: monospace;
+  margin-bottom: 10px;
+  white-space: pre-wrap; /* Ensure text wraps and respects whitespace */
+  text-align: left;
+  width: 100vh; /* Ensure it takes up the full width of its parent */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.cli-container input {
+  font-family: monospace;
+  width: 100%;
+  padding: 10px;
+  background-color: #383535;
+  color: #00ff00;
+  border: none;
+  outline: none;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.input-wrapper::before {
+  content: "> ";
+  color: #00ff00; /* Green color */
+  font-family: monospace;
+  margin-right: 10px; /* Space between `>` and input */
+}
+
+.suggestions-list {
+  font-family: monospace;
+  list-style-type: none;
+  color: #00ff00;
+  padding: 0;
+  margin: 0;
+  background-color: #383535;
+  border: 1px solid #00ff00; /* Add border for suggestions */
+}
