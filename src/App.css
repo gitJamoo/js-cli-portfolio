@@ -41,7 +41,7 @@ a:hover {
 .cli-container {
   font-family: monospace;
   width: 100%;
-  max-width: 800px;
+  max-width: 800em;
   border: 1px solid #00ff00;
   padding: 20px;
   background-color: #383535;
@@ -54,10 +54,11 @@ a:hover {
 .cli-output {
   font-family: monospace;
   margin-bottom: 10px;
-  white-space: pre-wrap; /* Ensure text wraps and respects whitespace */
+  white-space: pre-wrap; /* Preserve whitespace but allow text to wrap */
   text-align: left;
-  width: 100vh; /* Ensure it takes up the full width of its parent */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  width: 60vw; /* Adjust width based on viewport width */
+  box-sizing: border-box; /* Include padding and border in width */
+  overflow: clip;
 }
 
 .cli-container input {
@@ -90,35 +91,4 @@ a:hover {
   margin: 0;
   background-color: #383535;
   border: 1px solid #00ff00; /* Add border for suggestions */
-}
-
-/* Mobile Styles */
-@media (max-width: 768px) {
-  .App {
-    padding: 10px; /* Add some padding for smaller screens */
-  }
-
-  .main-content {
-    width: 100%; /* Full width on small screens */
-    padding: 10px; /* Reduced padding */
-  }
-
-  .cli-output {
-    font-size: 14px; /* Smaller font size for smaller screens */
-  }
-
-  .input-wrapper {
-    flex-direction: column; /* Stack input label and input vertically on small screens */
-    align-items: stretch; /* Stretch to full width */
-  }
-}
-
-@media (max-width: 480px) {
-  .App {
-    font-size: 14px; /* Further reduce font size for very small screens */
-  }
-
-  .cli-output {
-    font-size: 12px; /* Further reduce font size */
-  }
 }

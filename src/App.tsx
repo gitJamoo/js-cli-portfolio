@@ -2,16 +2,16 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 
-// const generateRandomLightColor = (): string => {
-//   const r = Math.floor(Math.random() * 256);
-//   const g = Math.floor(Math.random() * 256);
-//   const b = Math.floor(Math.random() * 256);
-//   // Ensure the color is light
-//   return `rgb(${Math.min(r + 200, 255)}, ${Math.min(g + 200, 255)}, ${Math.min(
-//     b + 200,
-//     255
-//   )})`;
-// };
+const generateRandomLightColor = (): string => {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+  // Ensure the color is light
+  return `rgb(${Math.min(r + 200, 255)}, ${Math.min(g + 200, 255)}, ${Math.min(
+    b + 200,
+    255
+  )})`;
+};
 
 const App: React.FC = () => {
   const [input, setInput] = useState<string>("");
@@ -141,6 +141,10 @@ const App: React.FC = () => {
     } as React.ChangeEvent<HTMLInputElement>);
   };
 
+  const handleMenuClose = () => {
+    setShowMenu(false);
+  };
+
   const handleModalConfirm = () => {
     setRainbowMode(true);
     setShowModal(false);
@@ -168,8 +172,15 @@ const App: React.FC = () => {
         <h4>Software Developer | Student Athlete</h4>
         <p>
           <a href="mailto:james.smith@example.com">Email</a> | Resume (
-          <a href="https://chatgpt.com/">download</a> -{" "}
-          <a href="https://chatgpt.com/" rel="noopener noreferrer">
+          <a href="/path/to/resume.pdf" download="James_Smith_Resume.pdf">
+            download
+          </a>{" "}
+          -{" "}
+          <a
+            href="/path/to/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             view
           </a>
           ) |{" "}
@@ -194,7 +205,7 @@ const App: React.FC = () => {
       <main>
         <div className="cli-container">
           <div className="cli-output">
-            <pre>{output}</pre>
+            <div>{output}</div>
           </div>
           <div className="input-wrapper">
             <input
@@ -257,11 +268,7 @@ const App: React.FC = () => {
       <footer className="footer">
         <p>
           © 2024 James Smith. All rights reserved.{" "}
-          <a
-            href="https://github.com/gitJamoo/js-cli-portfolio"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="" target="_blank" rel="noopener noreferrer">
             Source Code
           </a>
           .
